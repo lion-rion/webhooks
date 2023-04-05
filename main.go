@@ -1,9 +1,12 @@
 package main
 
-import . "apihandler/pkg/zenn"
+import (
+	. "apihandler/pkg/qiita"
+	"os"
+)
 
 func main() {
-	discord := ""
+	discord := os.Getenv("DISCORD_WH_1")
 
-	GetZennTrend(discord)
+	GetQiitaTrend(discord)
 }
