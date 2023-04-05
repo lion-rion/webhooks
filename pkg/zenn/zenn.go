@@ -25,7 +25,7 @@ func GetZennTrend(whurl string) {
 		return
 	}
 
-	message := "🌟 <@&1080379391621738619> 本日の人気記事です 🌟\n\n"
+	message := "🌟 本日の人気記事です 🌟\n\n"
 	// ここで、eventsの中身をループで5回して、messageに追加していく
 	for i := 0; i < 5; i++ {
 		message += fmt.Sprintf("%s %s ❤️%d \n https://zenn.dev/%s \n\n\n", events[i].Emoji, events[i].Title, events[i].Like, events[i].Path)
